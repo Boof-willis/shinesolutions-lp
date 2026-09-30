@@ -1,0 +1,7 @@
+# Not part of the website.
+# Client's keyword research and ad plan: keep out of this public repo.
+research/
+# Local preview + design tooling.
+.claude/
+.hallmark/
+.DS_Store
