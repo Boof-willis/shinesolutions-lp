@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "site": {
+    "name": "Shinesolutions Lp",
+    "slug": "shinesolutions-lp",
+    "workspace": "Shine Solutions"
+  },
+  "deploy_target": "renderer",
+  "published": true,
+  "runtime": {
+    "loader": "https://api.ockno.com/api/v1/page-assets/ockno-site.js",
+    "token": "site_jTCOR-BYayBpMqq7PRAn_QLU",
+    "script_tag": "<script src=\"https://api.ockno.com/api/v1/page-assets/ockno-site.js\" data-ockno-site=\"site_jTCOR-BYayBpMqq7PRAn_QLU\" defer></script>"
+  },
+  "pages": {
+    "home": {
+      "route": "/",
+      "file": "index.html",
+      "name": "Window Cleaning in St. George, UT | Shine Solutions",
+      "published": true,
+      "theme": {}
+    },
+    "privacy": {
+      "route": "/privacy",
+      "file": "privacy.html",
+      "name": "Privacy Policy | Shine Solutions",
+      "published": true,
+      "theme": {}
+    },
+    "terms": {
+      "route": "/terms",
+      "file": "terms.html",
+      "name": "Terms | Shine Solutions",
+      "published": true,
+      "theme": {}
+    }
+  },
+  "bindings_readonly": {
+    "_comment": "Mirrored from Ockno for reference. Ockno is authoritative; edits here are overwritten and never enforced.",
+    "pixels": [
+      {
+        "platform": "google",
+        "id": "AW-18330851082"
+      }
+    ],
+    "tracker": null
+  }
+}
