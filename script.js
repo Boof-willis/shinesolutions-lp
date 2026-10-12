@@ -155,8 +155,7 @@
     if (!stepFields[1].every((name) => rules[name](val(name)))) { goTo(1); checkStep(1); return; }
     if (!checkStep(2)) return;
 
-    // TODO before launch: set data-endpoint on the <form> to the lead destination
-    // (GoHighLevel webhook, Jobber, Housecall Pro, Formspree, Zapier). Accepts a JSON POST.
+    // Lead destination is data-endpoint on the <form> (Zapier catch hook).
     const endpoint = form.dataset.endpoint;
     if (!endpoint) {
       showError("Online booking isn't connected yet. Please call ");
@@ -180,8 +179,8 @@
     try {
       const res = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data),
+        // Form-encoded keeps this a CORS "simple" request; Zapier hooks reject the preflight a JSON body triggers
+        body: new URLSearchParams(data),
       });
       if (!res.ok) throw new Error(String(res.status));
       track("generate_lead", { form: "estimate", city: data.city, stories: data.stories, sms_service: data.sms_service });
