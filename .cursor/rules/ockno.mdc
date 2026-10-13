@@ -1,0 +1,11 @@
+---
+description: How this repository works with Ockno (the site Shinesolutions Lp)
+alwaysApply: true
+---
+
+Read `AGENTS.md` first. Two hard rules: keep every `<meta name="ockno-page" content="...">`
+exactly as it is, and a `data-ockno-form` must map an identity field (email/phone/a name). Forms
+are `data-ockno-form` containers with `data-ockno-field` inputs, a `data-ockno-submit` button and
+an optional `data-ockno-consent` checkbox beside a phone field; a form with its own submit
+logic is `data-ockno-form="observe"` and keeps it. The page's own JavaScript is fine. Ockno posts
+a check on every push; a red check names the file and the fix.
