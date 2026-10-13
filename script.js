@@ -164,8 +164,7 @@
     }
 
     const data = Object.fromEntries(new FormData(form));
-    data.sms_service = form.elements.sms_service.checked ? "yes" : "no";
-    data.sms_marketing = form.elements.sms_marketing.checked ? "yes" : "no";
+    data.sms_service = form.elements.sms_service?.checked ? "yes" : "no";
     data.sms_consent_text = consentText;
     data.submitted_at = new Date().toISOString();
     data.page_url = location.href;

@@ -141,7 +141,7 @@
       <div class="hero__form" id="estimate">
         <!-- data-ads-conversion: the Google Ads conversion to report when a lead is received. Replace CONVERSION_LABEL with the
              label from Google Ads (Goals > Conversions > your lead-form action > Tag setup > event snippet "send_to"). -->
-        <form class="form" id="estimate-form" novalidate data-endpoint="https://hooks.zapier.com/hooks/catch/29011102/4miz0ay/" data-ads-conversion="AW-18330851082/CONVERSION_LABEL" data-ockno-form="observe">
+        <form class="form" id="estimate-form" novalidate data-endpoint="https://hooks.zapier.com/hooks/catch/29011102/4miz0ay/" data-ads-conversion="AW-18330851082/CONVERSION_LABEL" data-ockno-form>
           <div class="form__main">
             <!-- phones + tablets: the plan offer rides on top of the form card as a tear-off ticket
                  (desktop shows the full coupon beside the form instead). Amounts must match #plans. -->
@@ -222,7 +222,7 @@
                 <label class="consent__check"><input type="checkbox" name="sms_service" value="yes" aria-describedby="consent-fine" data-ockno-consent="sms"><span>Text me about my estimate and appointments</span></label>
               </div>
 
-              <button class="btn btn--primary btn--block" type="submit">
+              <button class="btn btn--primary btn--block" type="submit" data-ockno-submit>
                 <span class="btn__spin" aria-hidden="true"></span>
                 <span class="btn__label">Get my free estimate</span>
                 <svg class="i i--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
@@ -252,7 +252,9 @@
               <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call (435)&nbsp;485-7727</span>
             </a>
           </div>
-        </form>
+        
+<p data-ockno-success style="margin-top:1rem;font-weight:600;">Thanks! We'll be in touch shortly.</p>
+</form>
       </div>
 
       <ul class="hero__points" role="list">
