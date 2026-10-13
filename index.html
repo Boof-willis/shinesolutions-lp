@@ -141,7 +141,7 @@
       <div class="hero__form" id="estimate">
         <!-- data-ads-conversion: the Google Ads conversion to report when a lead is received. Replace CONVERSION_LABEL with the
              label from Google Ads (Goals > Conversions > your lead-form action > Tag setup > event snippet "send_to"). -->
-        <form class="form" id="estimate-form" novalidate data-endpoint="https://hooks.zapier.com/hooks/catch/29011102/4miz0ay/" data-ads-conversion="AW-18330851082/CONVERSION_LABEL">
+        <form class="form" id="estimate-form" novalidate data-endpoint="https://hooks.zapier.com/hooks/catch/29011102/4miz0ay/" data-ads-conversion="AW-18330851082/CONVERSION_LABEL" data-ockno-form="observe">
           <div class="form__main">
             <!-- phones + tablets: the plan offer rides on top of the form card as a tear-off ticket
                  (desktop shows the full coupon beside the form instead). Amounts must match #plans. -->
@@ -166,9 +166,9 @@
                 <fieldset class="choice" id="f-stories" aria-describedby="f-stories-error">
                   <legend>How many stories?</legend>
                   <div class="choice__options">
-                    <label class="choice__opt"><input type="radio" name="stories" value="1"><span><b>1</b>story</span></label>
-                    <label class="choice__opt"><input type="radio" name="stories" value="2"><span><b>2</b>stories</span></label>
-                    <label class="choice__opt"><input type="radio" name="stories" value="3+"><span><b>3+</b>stories</span></label>
+                    <label class="choice__opt"><input type="radio" name="stories" value="1" data-ockno-field="custom:how_many_stories"><span><b>1</b>story</span></label>
+                    <label class="choice__opt"><input type="radio" name="stories" value="2" data-ockno-field="custom:how_many_stories"><span><b>2</b>stories</span></label>
+                    <label class="choice__opt"><input type="radio" name="stories" value="3+" data-ockno-field="custom:how_many_stories"><span><b>3+</b>stories</span></label>
                   </div>
                   <p class="field__error" id="f-stories-error" hidden>Pick one</p>
                 </fieldset>
@@ -176,7 +176,7 @@
                 <div class="field">
                   <label for="f-city">City</label>
                   <div class="select">
-                    <select id="f-city" name="city" required>
+                    <select id="f-city" name="city" required data-ockno-field="city">
                       <option value="" disabled selected hidden></option>
                       <option>St. George</option>
                       <option>Washington</option>
@@ -207,21 +207,19 @@
               <div class="form__fields">
                 <div class="field">
                   <label for="f-name">Name</label>
-                  <input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required>
+                  <input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required data-ockno-field="full_name">
                   <p class="field__error" id="f-name-error" hidden>Enter your name</p>
                 </div>
 
                 <div class="field">
                   <label for="f-phone">Phone</label>
-                  <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder=" " required>
+                  <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder=" " required data-ockno-field="phone">
                   <p class="field__error" id="f-phone-error" hidden>Enter a 10-digit number</p>
                 </div>
               </div>
 
               <div class="consent">
-                <label class="consent__check"><input type="checkbox" name="sms_service" value="yes" aria-describedby="consent-fine"><span>Text me about my estimate and appointments</span></label>
-                <label class="consent__check"><input type="checkbox" name="sms_marketing" value="yes" aria-describedby="consent-fine"><span>Text me occasional offers and seasonal reminders</span></label>
-                <p class="consent__fine" id="consent-fine">Optional. By checking a box above, you agree to receive recurring automated texts from Shine Solutions at the number provided. Consent is not a condition of purchase. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. <a href="privacy.html" target="_blank" rel="noopener">Privacy&nbsp;Policy</a> · <a href="terms.html" target="_blank" rel="noopener">Terms</a></p>
+                <label class="consent__check"><input type="checkbox" name="sms_service" value="yes" aria-describedby="consent-fine" data-ockno-consent="sms"><span>Text me about my estimate and appointments</span></label>
               </div>
 
               <button class="btn btn--primary btn--block" type="submit">
@@ -230,6 +228,7 @@
                 <svg class="i i--arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
               </button>
               <p class="form__status" role="status" aria-live="polite"></p>
+              <p class="consent__fine" id="consent-fine">Optional. By checking the box above, you agree to receive recurring automated texts from Shine Solutions at the number provided. Consent is not a condition of purchase. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. <a href="privacy.html" target="_blank" rel="noopener">Privacy&nbsp;Policy</a> · <a href="terms.html" target="_blank" rel="noopener">Terms</a></p>
             </div>
 
             <!-- Ad attribution, filled by script.js from the landing URL -->
@@ -238,8 +237,8 @@
             <input type="hidden" name="utm_campaign">
             <input type="hidden" name="utm_term">
             <input type="hidden" name="page" value="window-cleaning-st-george">
-            <input type="hidden" name="offer" value="Plan discounts: monthly $150, quarterly $100, twice a year $50 off per clean">
-            <input type="hidden" name="plan" value="">
+            <input type="hidden" name="offer" value="Plan discounts: monthly $150, quarterly $100, twice a year $50 off per clean" data-ockno-field="opportunity:offer">
+            <input type="hidden" name="plan" value="" data-ockno-field="opportunity:plan">
 
             <p class="form__alt">Prefer to talk? <a href="tel:+14354857727" data-track="phone_click">Call (435)&nbsp;485-7727</a></p>
             <p class="rating-pill rating-pill--light form__rating"><span class="rating-pill__stars" role="img" aria-label="Rated 5 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="rating-pill__text">5.0 stars · 84 Google reviews<svg class="g-logo" aria-hidden="true"><use href="#i-google"/></svg></span></p>
@@ -705,7 +704,6 @@
   </footer>
 
   <div class="bar" id="bar">
-    <a class="btn btn--ghost" href="tel:+14354857727" data-track="phone_click"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span></a>
     <a class="btn btn--primary" href="#estimate"><span class="btn__label">Free estimate</span></a>
   </div>
 

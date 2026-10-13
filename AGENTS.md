@@ -33,6 +33,10 @@ manifest marks `published`. Nothing here needs a build step.
   for an answer about this one purchase such as budget or square footage), a `data-ockno-submit` button, and, optionally beside a phone
   field, a `data-ockno-consent` checkbox (records written text-message opt-in on the contact; the wording is yours). At least one of email / phone / a name is
   required. Ockno's runtime then owns validation and submission.
+- Fields this workspace already has - reuse these keys whenever a question means the same thing;
+  never invent a second key for it (Ockno merges duplicates, but it should not have to):
+  contact: `custom:how_many_stories (How many stories)`
+  opportunity: `opportunity:offer (Offer)`, `opportunity:plan (Plan)`
 - A form that already has its own submit logic keeps it: mark it `data-ockno-form="observe"`
   and Ockno only records each submission (fields via `data-ockno-field`) alongside whatever the
   form does. Never remove or replace a page's own JavaScript to wire a form. Inputs the page's
